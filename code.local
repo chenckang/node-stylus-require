@@ -1,0 +1,24 @@
+module.exports = (function () {
+  var css = "${css}";
+  if (typeof document === 'object') {
+    function appendStyle() {
+      var md5 = "${MD5}";
+      if (document.getElementById(md5)) {
+        return;
+      }
+      var styleDOM = document.createElement("style");
+      styleDOM.innerHTML = css;
+      styleDOM.id = md5;
+      document.head.appendChild(styleDOM);
+    }
+
+    if ("complete" === document.readyState) {
+      appendStyle();
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      appendStyle();
+    });
+  }
+  return css;
+})

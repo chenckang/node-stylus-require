@@ -1,0 +1,12 @@
+{
+  "name": "simple-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simple.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node simple.js"
+  },
+  "author": "chenckang@gmail.com",
+  "license": "MIT"
+}

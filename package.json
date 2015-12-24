@@ -1,0 +1,29 @@
+{
+  "name": "node-stylus-require",
+  "version": "1.0.0",
+  "description": "A stylus require tool for node to require stylus files and append css to document when use react-engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel Style.jsx --out-file Style.js --presets react"
+  },
+  "keywords": [
+    "react-engine",
+    "require",
+    "stylus",
+    "isomorphic",
+    "node"
+  ],
+  "author": "chenckang@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.14.3",
+    "stylus": "^0.53.0"
+  },
+  "devDependencies": {
+    "babel-cli": "~6.3.17",
+    "babel-preset-react": "~6.3.13",
+    "clean-css": "~3.4.8",
+    "uglify-js": "^2.6.1"
+  }
+}
