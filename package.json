@@ -18,9 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^0.13.3",
-    "stylus": "^0.53.0"
-  },
-  "devDependencies": {
+    "stylus": "^0.53.0",
     "babel-cli": "~6.3.17",
     "babel-preset-react": "~6.3.13",
     "clean-css": "~3.4.8",
