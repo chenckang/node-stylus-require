@@ -1,4 +1,4 @@
-import flux from 'dispatcher/control';
+import flux from '../dispatcher/control';
 import {createActions} from 'alt/utils/decorators';
 
 @createActions(flux)

@@ -29,13 +29,14 @@ function register(options) {
     var srcHash = md5(src)
 
     stylus.render(src, {filename: filename}, function (err, css) {
-      if (err) throw err
-      css = cleanCSS.minify(css.replace(/[\r\n\s]/g, '')).styles
-      codeStr = codeStr.replace(/\$\{css\}/g, css)
-      codeStr = codeStr.replace(/\$\{MD5\}/, srcHash)
-      codeStr = UglifyJS.minify(codeStr, {fromString: true}).code;
+      if (err) { throw err }
+      var code;
+      css = cleanCSS.minify(css).styles
+      code = codeStr.replace(/\$\{css\}/g, css)
+      code = code.replace(/\$\{MD5\}/, srcHash)
+      code = UglifyJS.minify(code, {fromString: true}).code;
 
-      module._compile(codeStr)
+      module._compile(code)
     })
   }
 }

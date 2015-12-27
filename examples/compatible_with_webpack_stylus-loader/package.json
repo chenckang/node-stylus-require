@@ -10,24 +10,20 @@
     "start-engine": "node express/app.js"
   },
   "devDependencies": {
-    "babel-core": "^5.8.30",
-    "babel-loader": "^5.3.2",
-    "gulp": "^3.9.0",
+    "babel-loader": "^6.2.0",
+    "css-loader": "^0.23.1",
     "html-webpack-plugin": "^1.6.2",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.4.2",
     "webpack": "^1.12.2"
   },
   "dependencies": {
-    "alt": "^0.17.6",
-    "babel-register": "~6.3.13",
-    "babel-runtime": "^5.8.29",
-    "css-loader": "~0.23.1",
-    "express": "~4.13.3",
-    "node-require-jsx": "~0.1.1",
+    "alt": "^0.17.9",
+    "babel": "^5.8.34",
+    "express": "^4.13.3",
     "react": "^0.13.3",
-    "react-engine": "~2.6.0",
-    "react-router": "^0.13.4",
-    "style-loader": "~0.13.0",
-    "stylus-loader": "~1.4.2"
+    "react-engine": "^2.6.0",
+    "react-router": "^0.13.5"
   },
   "author": "chenckang@gmail.com",
   "license": "MIT"

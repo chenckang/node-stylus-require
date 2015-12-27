@@ -1,6 +1,4 @@
-require('babel-register')({
-  presets: ['react']
-});
+require('babel/register')({});
 
 require('node-stylus-require').register()
 
