@@ -1,6 +1,6 @@
 {
   "name": "node-stylus-require",
-  "version": "1.0.0-beta",
+  "version": "1.0.1-beta",
   "description": "A stylus require tool for node to require stylus files and append css to document when use react-engine",
   "main": "index.js",
   "scripts": {
