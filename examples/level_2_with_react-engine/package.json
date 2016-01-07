@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "node-require-jsx": "~0.1.1",
-    "react-engine": "~2.6.0"
+    "react-engine": "~2.6.0",
+    "node-stylus-require": "1.0.0-Beta"
   }
 }

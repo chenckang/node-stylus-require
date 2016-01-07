@@ -12,7 +12,9 @@
     "require",
     "stylus",
     "isomorphic",
-    "node"
+    "node",
+    "stylus-loader",
+    "webpack"
   ],
   "author": "chenckang@gmail.com",
   "license": "MIT",
