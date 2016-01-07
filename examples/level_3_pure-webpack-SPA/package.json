@@ -20,7 +20,7 @@
     "react": "^0.13.3",
     "react-engine": "^2.6.0",
     "react-router": "^0.13.5",
-    "node-stylus-require": "1.0.0-Beta"
+    "node-stylus-require": "1.0.0-beta"
   },
   "author": "chenckang@gmail.com",
   "license": "MIT"
