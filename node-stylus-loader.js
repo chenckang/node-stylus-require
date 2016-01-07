@@ -1,5 +1,3 @@
-'use strict';
-
 var compress = require('./compress.js')
 var md5 = require('md5')
 var stylus = require('stylus')

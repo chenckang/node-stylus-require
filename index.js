@@ -7,6 +7,7 @@ var path = require('path')
 var md5 = require('md5')
 
 var compress = require('./compress.js')
+var styleInterceptor = require('./interceptor');
 
 var codeStr = fs.readFileSync(path.join(__dirname, 'code.local.js'), {
     encoding: 'utf8'
@@ -31,5 +32,6 @@ function register(options) {
 }
 
 module.exports = {
-  register: register
+  register: register,
+  styleInterceptor: styleInterceptor
 }

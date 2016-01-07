@@ -1,0 +1,19 @@
+{
+  "name": "express-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "chenckang@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.13.3"
+  },
+  "dependencies": {
+    "node-require-jsx": "~0.1.1",
+    "react-engine": "~2.6.0"
+  }
+}

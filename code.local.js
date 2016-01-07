@@ -1,25 +1,31 @@
 module.exports = (function () {
-  var css = "${css}";
+  var css = "${css}"
+  var md5 = "${MD5}"
   if (typeof document === 'object') {
-    debugger;
     function appendStyle() {
-      var md5 = "${MD5}";
-      if (document.getElementById(md5)) {
-        return;
+      var style = document.getElementById(md5)
+
+      if (style) {
+        if (style.parentNode !== document.head) {
+          document.head.appendChild(style)
+        }
+        return
       }
-      var styleDOM = document.createElement("style");
-      styleDOM.innerHTML = css;
-      styleDOM.id = md5;
-      document.head.appendChild(styleDOM);
+
+      var styleDOM = document.createElement("style")
+      styleDOM.innerHTML = css
+      styleDOM.id = md5
+      styleDOM.setAttribute('data-node', 'node-stylus')
+      document.head.appendChild(styleDOM)
     }
 
     if ("complete" === document.readyState) {
-      appendStyle();
+      appendStyle()
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      appendStyle();
-    });
+      appendStyle()
+    })
   }
-  return css;
+  return {id: md5, css: css}
 })

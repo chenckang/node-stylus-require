@@ -9,6 +9,9 @@
 		},
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/yichun/Documents/work/webpack-php-mock"
 		}
 	]
 }

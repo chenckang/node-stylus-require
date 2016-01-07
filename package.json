@@ -17,11 +17,13 @@
   "author": "chenckang@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "react": "^0.13.3",
-    "stylus": "^0.53.0",
     "babel-cli": "~6.3.17",
     "babel-preset-react": "~6.3.13",
+    "cheerio": "^0.19.0",
     "clean-css": "~3.4.8",
+    "express-interceptor": "^1.1.1",
+    "react": "^0.13.3",
+    "stylus": "^0.53.0",
     "uglify-js": "^2.6.1"
   }
 }

@@ -8,7 +8,7 @@ module.exports = function (css, codeStr, hash) {
   css = cleanCSS.minify(css).styles
   code = codeStr.replace(/\$\{css\}/g, css)
   code = code.replace(/\$\{MD5\}/, hash)
-  // code = UglifyJS.minify(code, {fromString: true}).code
+  code = UglifyJS.minify(code, {fromString: true}).code
 
   return code
 }

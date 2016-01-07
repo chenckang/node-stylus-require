@@ -1,20 +1,13 @@
-var React = require('react');
+var React = require('react')
 
 var Style = React.createClass({
   render: function () {
-    if (typeof STYLUS_LOADER === 'boolean' && STYLUS_LOADER) {
-      return null;
-    }
-    if (typeof this.props.style !== 'function') {
-      return null;
-    }
-    return (
-      <script dangerouslySetInnerHTML={
-        {__html: '('+ this.props.style.toString() + ')()'}
-      }>
-      </script>
-    );
-  }
-});
+    var style = this.props.style()
 
-module.exports = Style;
+    return (
+      <style id={style.id} data-node="node-stylus">{style.css}</style>
+    )
+  }
+})
+
+module.exports = Style
