@@ -18,6 +18,9 @@
 var React = require('react');
 var Router = require('react-router');
 var ListCSS = require('./List.styl');
+var Style = require('node-stylus-require/Style.jsx');
+
+console.log(ListCSS)
 
 module.exports = React.createClass({
 
@@ -25,6 +28,7 @@ module.exports = React.createClass({
 
     return (
       <div id='list'>
+        <Style style={ListCSS}></Style>
         <h1>Movies</h1>
         <h6>Click on a movie to see the details</h6>
         <ul>

@@ -1,6 +1,7 @@
 module.exports = (function () {
   var css = "${css}";
   if (typeof document === 'object') {
+    debugger;
     function appendStyle() {
       var md5 = "${MD5}";
       if (document.getElementById(md5)) {

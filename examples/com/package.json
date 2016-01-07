@@ -1,0 +1,30 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --devtool source-map --progress --inline --colors --port 8888",
+    "start-plain": "webpack-dev-server --progress --inline --colors --port 8888",
+    "start-engine": "node express/app.js"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.0",
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^1.6.2",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.4.2",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "alt": "^0.17.9",
+    "babel": "^5.8.34",
+    "express": "^4.13.3",
+    "react": "^0.13.3",
+    "react-engine": "^2.6.0",
+    "react-router": "^0.13.5"
+  },
+  "author": "chenckang@gmail.com",
+  "license": "MIT"
+}

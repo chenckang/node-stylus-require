@@ -1,0 +1,385 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"b",
+				"biz"
+			],
+			[
+				"_ch",
+				"_changeBizValue"
+			],
+			[
+				"che",
+				"checked"
+			],
+			[
+				"check",
+				"checkAppName"
+			],
+			[
+				"basi",
+				"basicInfo"
+			],
+			[
+				"pro",
+				"props"
+			],
+			[
+				"see",
+				"selectedValue"
+			],
+			[
+				"get",
+				"getOptionValue"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"otp",
+				"options"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"fun",
+				"funSuggestions"
+			],
+			[
+				"opt",
+				"options"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"text",
+				"text-overflow"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"li",
+				"line-height"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"GitGutter: Compare Against Branch"
+			],
+			[
+				"setsty",
+				"Set Syntax: Stylus"
+			],
+			[
+				"setjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sethtm",
+				"Set Syntax: HTML"
+			],
+			[
+				"intal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/yichun/Documents/work/notes"
+	],
+	"file_history":
+	[
+		"/Users/yichun/Documents/work/notes/node/buffer/README.md",
+		"/Users/yichun/Documents/work/pagen/app/asset/style/widgets.styl",
+		"/Users/yichun/Documents/work/pagen/app/view/page/list.jsx",
+		"/Users/yichun/Documents/work/pagen/app/view/page/exportdialog.jsx",
+		"/Users/yichun/Documents/work/pagen/app/view/pagenew/appselector.jsx",
+		"/Users/yichun/Documents/work/pagen/node_modules/react-autosuggest/dist/Autosuggest.js",
+		"/Users/yichun/Documents/work/notes/node/assert/README.md",
+		"/Users/yichun/Documents/work/pagen/app/view/pagenew/index.jsx",
+		"/Users/yichun/Documents/work/pagen/app/view/pageedit/index.jsx",
+		"/Users/yichun/Documents/work/pagen/app/lib/vanillaJSUtils.js",
+		"/Users/yichun/Documents/work/pagen/app/store/appselector.js",
+		"/Users/yichun/Documents/work/react-json-pretty/package.json",
+		"/Users/yichun/Documents/work/react-json-pretty/.gitignore",
+		"/Users/yichun/Documents/work/react-json-pretty/example/app/Example.jsx",
+		"/Users/yichun/Documents/work/react-json-pretty/example/public/index.html",
+		"/Users/yichun/Documents/work/react-json-pretty/JSONPretty.jsx",
+		"/Users/yichun/Documents/work/pagen/app/view/pagenew/pageinfo.jsx",
+		"/Users/yichun/Documents/work/pagen/package.json",
+		"/Users/yichun/Documents/work/pagen/app/asset/style/pagenew.styl",
+		"/Users/yichun/Documents/work/react-json-pretty/README.md",
+		"/Users/yichun/Documents/work/pagen/app/asset/style/style.css",
+		"/Users/yichun/Documents/work/pagen/app/view/pagenew/pageconfig/apiselector.jsx",
+		"/Users/yichun/Documents/work/pagen/node_modules/react-input-autosize/lib/AutosizeInput.js",
+		"/Users/yichun/Documents/work/pagen/app/view/shared/filter.jsx",
+		"/Users/yichun/Documents/work/pagen/app/view/pagenew/pageconfig/compoutput.jsx",
+		"/Users/yichun/Documents/work/pagen/app/view/pagenew/globalVars.jsx",
+		"/Users/yichun/Documents/work/pagen/app/asset/style/controls.styl",
+		"/Users/yichun/Documents/work/node-stylus-require/code.local.js",
+		"/Users/yichun/Documents/work/pagen/app/view/shared/select.jsx",
+		"/Users/yichun/Documents/work/pagen/app/view/page/JSONDialog.jsx",
+		"/Users/yichun/Documents/work/pagen/app/view/page/item.jsx",
+		"/Users/yichun/Documents/work/pagen/app/view/shared/jsonpretty.jsx",
+		"/Users/yichun/Documents/work/react-json-pretty/JSONPretty.styl",
+		"/Users/yichun/Documents/work/react-json-pretty/example/webpack-json-pretty/app/components/example/Example.jsx"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 99.0,
+		"where_history":
+		[
+			".",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Autosuggest",
+			"value",
+			"setState",
+			"setBasicInfo",
+			"PageInfo",
+			"onBlur",
+			"setState",
+			"console",
+			"getBasicInfo",
+			"isPageInfoComplete",
+			"isNameAvailable",
+			"savePageInfo",
+			"新建",
+			"doesNameChanged",
+			"reject",
+			"isNameAvailable",
+			"biz",
+			"isNameAvailable",
+			"BasicInfo",
+			"onSelected",
+			"errMsg",
+			"setState",
+			"onUnFocus",
+			"AppSelector",
+			"renderFunc",
+			"renderLabel",
+			"optionRenderer",
+			"eaeaea",
+			"border: 1px solid #eaeaea",
+			"form-input",
+			"height",
+			"Select",
+			"ParamRecord",
+			"Select",
+			"errorLabelItem",
+			"detailStyle",
+			"tooltip",
+			"Tooltip",
+			"shared",
+			"errorType",
+			"errorLable",
+			"error",
+			"errorLable",
+			"错误",
+			"新建",
+			"错误",
+			"错误提示",
+			"select",
+			"Select",
+			"InputRecord",
+			"ParamRecord",
+			"Select",
+			"select",
+			"Select",
+			"InputGlobalVar",
+			"select",
+			"select-input",
+			"select.jsx",
+			"select",
+			"select-value",
+			"过滤条件"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "node-stylus-require.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"autosize",
+				"pagen/node_modules/react-input-autosize/lib/AutosizeInput.js"
+			],
+			[
+				"",
+				"Find Results"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/work/node-stylus-require/node-stylus-require.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 231.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

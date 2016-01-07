@@ -21,7 +21,7 @@
 require('node-require-jsx').install();
 require('node-stylus-require').register();
 
-var PORT = 3000;
+var PORT = 8888;
 var path = require('path');
 var movies = require('./movies.json');
 var express = require('express');

@@ -37,7 +37,7 @@ module.exports = {
         loader: 'json-loader'
       },
       {
-        test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader'
+        test: /\.styl$/, loader: 'node-stylus-require/node-stylus-loader.js'
       }
     ]
   },
