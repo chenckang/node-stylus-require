@@ -23860,29 +23860,28 @@
 /* 202 */
 /***/ function(module, exports) {
 
-	module.exports=function(){function e(){var e=document.getElementById(d);if(e)return void(e.parentNode!==document.head&&document.head.appendChild(e));var n=document.createElement("style");n.innerHTML=t,n.id=d,n.setAttribute("data-node","node-stylus"),document.head.appendChild(n)}var t="#list{background:#fff;color:#ff0}#list li{border:5px solid #fff}",d="2bb2acd5345f3617e1aec277693289aa";return"object"==typeof document&&("complete"===document.readyState&&e(),document.addEventListener("DOMContentLoaded",function(){e()})),{id:d,css:t}};
+	module.exports=function(){function e(){var e=document.getElementById(d+"-style");if(e)return e.removeAttribute("data-reactid"),void(e.parentNode!==document.head&&document.head.appendChild(e));var n=document.getElementById(d),o=document.createElement("style");o.id=d+"-style",o.setAttribute("data-node","node-style"),n?o.innerHTML=n.innerHTML:o.innerHTML=t,document.head.appendChild(o)}var t="#list{background:#fff;color:#ff0}#list li{border:5px solid #fff}",d="2bb2acd5345f3617e1aec277693289aa";return"object"==typeof document&&("complete"===document.readyState&&e(),document.addEventListener("DOMContentLoaded",function(){e()})),{id:d,css:t}};
 
 /***/ },
 /* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(2)
+	var React = __webpack_require__(2);
 
 	var Style = React.createClass({
 	  displayName: "Style",
 
 	  render: function () {
-	    var style = this.props.style()
+	    var style = this.props.style();
 
-	    return React.createElement(
-	      "style",
-	      { id: style.id, "data-node": "node-stylus" },
-	      style.css
-	    )
+	    // 如果是后端渲染，则返回占位标签
+	    // 1. 交由express的拦截器处理
+	    // 2. 浏览器端也处理
+	    return React.createElement("noscript", { id: style.id, "data-node": "node-stylus", dangerouslySetInnerHTML: { __html: style.css } });
 	  }
-	})
+	});
 
-	module.exports = Style
+	module.exports = Style;
 
 
 /***/ },
@@ -23945,7 +23944,7 @@
 /* 205 */
 /***/ function(module, exports) {
 
-	module.exports=function(){function e(){var e=document.getElementById(d);if(e)return void(e.parentNode!==document.head&&document.head.appendChild(e));var n=document.createElement("style");n.innerHTML=t,n.id=d,n.setAttribute("data-node","node-stylus"),document.head.appendChild(n)}var t="#detail{font-size:3em}",d="d8cb6ba2c88aeb441b1ecae439657d84";return"object"==typeof document&&("complete"===document.readyState&&e(),document.addEventListener("DOMContentLoaded",function(){e()})),{id:d,css:t}};
+	module.exports=function(){function e(){var e=document.getElementById(d+"-style");if(e)return e.removeAttribute("data-reactid"),void(e.parentNode!==document.head&&document.head.appendChild(e));var n=document.getElementById(d),o=document.createElement("style");o.id=d+"-style",o.setAttribute("data-node","node-style"),n?o.innerHTML=n.innerHTML:o.innerHTML=t,document.head.appendChild(o)}var t="#detail{font-size:3em}",d="d8cb6ba2c88aeb441b1ecae439657d84";return"object"==typeof document&&("complete"===document.readyState&&e(),document.addEventListener("DOMContentLoaded",function(){e()})),{id:d,css:t}};
 
 /***/ },
 /* 206 */

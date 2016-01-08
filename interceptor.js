@@ -9,12 +9,25 @@ var styleInterceptor = interceptor(function(req, res){
     },
     // Appends a paragraph at the end of the response body
     intercept: function(body, send) {
-      var $document = cheerio.load(body)
+      var $ = cheerio;
+      var $document = $.load(body)
 
       var $nodes = $document('[data-node="node-stylus"]').remove()
       var uniqStyles = {}
       var $styles = $nodes.each(function(idx, elm) {
-        uniqStyles[elm.attribs.id] = elm
+        var css = $(elm).text()
+
+        var style = [
+          '<style id=',
+          elm.attribs.id + '-style',
+          ' ',
+          'data-node="node-style"',
+          '>',
+          css,
+          '</style>'
+        ].join('')
+
+        uniqStyles[elm.attribs.id] = style
       })
 
       for (var i in uniqStyles) {

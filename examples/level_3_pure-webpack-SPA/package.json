@@ -17,10 +17,10 @@
   "dependencies": {
     "alt": "^0.17.9",
     "babel-runtime": "^5.8.29",
+    "node-stylus-require": "^1.0.2-beta",
     "react": "^0.13.3",
     "react-engine": "^2.6.0",
-    "react-router": "^0.13.5",
-    "node-stylus-require": "1.0.0-beta"
+    "react-router": "^0.13.5"
   },
   "author": "chenckang@gmail.com",
   "license": "MIT"

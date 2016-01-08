@@ -7,10 +7,10 @@ class Main extends React.Component {
     render() {
         return (
             <div id="main">
-                <Style style={MainCSS}></Style>
                 <h1>Example</h1>
                 <Link to="example">Go to example</Link>
                 <RouteHandler></RouteHandler>
+                <Style style={MainCSS}></Style>
             </div>
         );
     }

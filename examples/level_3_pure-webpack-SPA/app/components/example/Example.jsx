@@ -25,9 +25,9 @@ class Example extends React.Component {
     render() {
         return (
             <div id="example">
-                <input type="text" value={this.state.name} onChange={this.onChange}/>
-                <h1>It works: {this.props.name}</h1>
                 <Style style={ExampleCSS}></Style>
+                <input type="text" value={this.state.name} onChange={this.onChange}/>
+                <h1 className="example-title">It works: {this.props.name}</h1>
             </div>
         );
     }

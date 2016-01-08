@@ -15,10 +15,10 @@
     "express-favicon": "^1.0.1",
     "json-loader": "^0.5.4",
     "node-require-jsx": "~0.1.1",
+    "node-stylus-require": "^1.0.2-beta",
     "react": "^0.13.3",
     "react-engine": "^2.6.0",
     "react-router": "^0.13.5",
-    "webpack": "^1.12.9",
-    "node-stylus-require": "1.0.0-beta"
+    "webpack": "^1.12.9"
   }
 }
