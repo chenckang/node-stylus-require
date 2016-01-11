@@ -14,9 +14,9 @@ The installation is pretty simple. Use `npm install` node-stylus-require to your
 
 ## What is isomorphic and why
 
-Isomorphic application is the awesome ones that the backend and the frontend use the same code, which is usually JavaScript. And it is pretty fast with better user experience.
+Isomorphic applications are the awesome ones that the backend and the frontend use the same code, which is usually JavaScript. And it is pretty fast with better user experience.
 
-The reasons why they are fast are that they use backend rendering all the page with JavaScript executed so that the first screen is pretty fast, and the SPA on the frontend need no loading of addtional resources. Now with the help of node this is really possible that Both the frontend and the backend use the same code. This is really cool and the future of the JavaScript!
+The reasons why they are fast are that they use backend rendering all the page with JavaScript executed so that the first screen is pretty fast, and the SPA on the frontend need no loading of addtional resources. Now with the help of NodeJS this is really possible that both the frontend and the backend use the same code. This is really cool and is the future of JavaScript!
 
 The result is people like your awesome application. Here let's get start to learn how to use node-stylus-require to help your application's style management.
 
@@ -35,13 +35,13 @@ This is a simple usage, with this you can require stylus file directly into your
 
     console.log('This output css is %s !', JSON.stringify(simpleCSS()));
 
-The `{extensions: '.styl'}` is optional, and also the `.style` is the default value.The return value is `{id: {MD5}, css: {CSS String}}`
+The `{extensions: '.styl'}` is optional, and the `.style` is the default value. The return format is `{id: {MD5}, css: {CSS String}}`.
 
-The complete example is [here](https://github.com/chenckang/node-stylus-require/tree/master/examples/level_1_simple-example).
+The complete example is [here](https://github.com/chenckang/node-stylus-require/tree/master/examples/level_1_simple-example). Run `npm start` to check the output.
 
 ### Level 2 Backend Rendering
 
-This is a pure backend applications based on express. With the help of react-engine and express, we will create an express site.
+This is a pure backend applications based on express. With the help of react-engine and express, we will create an site based on express.
 
 The first step is still register `.styl` files to nodejs.
 
@@ -104,7 +104,6 @@ Finally, add them to you page use the React render function.
             <div id="main">
                 <h1>Example</h1>
                 <Link to="example">Go to example</Link>
-                <RouteHandler></RouteHandler>
                 <Style style={MainCSS}></Style>
             </div>
         );

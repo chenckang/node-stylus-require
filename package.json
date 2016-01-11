@@ -14,7 +14,8 @@
     "isomorphic",
     "node",
     "stylus-loader",
-    "webpack"
+    "webpack",
+    "react-component"
   ],
   "author": "chenckang@gmail.com",
   "license": "MIT",
