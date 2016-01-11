@@ -35,7 +35,7 @@ This is a simple usage, with this you can require stylus file directly into your
 
     console.log('This output css is %s !', JSON.stringify(simpleCSS()));
 
-The `{extensions: '.styl'}` is optional, and the `.style` is the default value. The return format is `{id: {MD5}, css: {CSS String}}`.
+The `{extensions: '.styl'}` is optional, and the `.styl` is the default value. The return format is `{id: {MD5}, css: {CSS String}}`.
 
 The complete example is [here](https://github.com/chenckang/node-stylus-require/tree/master/examples/level_1_simple-example). Run `npm start` to check the output.
 
