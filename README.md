@@ -126,6 +126,10 @@ Then, add express interceptor to help backend rendering.
     ...
     app.use(nodeStylusRequire.styleInterceptor)
 
+Like the level 3, you need add 'node-stylus-loader' for webpack to handle '.styl' files, or webpack will throw errors.
+
+    test: /\.styl$/, loader: 'node-stylus-require/node-stylus-loader.js'
+
 The next step is requiring stylus files and Style react component.
 
     var listCSS = require('./List.styl')
