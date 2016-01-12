@@ -17,6 +17,11 @@
     "webpack",
     "react-component"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenckang/node-stylus-require"
+  },
+  "homepage": "https://github.com/chenckang/node-stylus-require#readme",
   "author": "chenckang@gmail.com",
   "license": "MIT",
   "dependencies": {
