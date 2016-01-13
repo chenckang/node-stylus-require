@@ -12,7 +12,7 @@ var styleInterceptor = interceptor(function(req, res){
       var $ = cheerio;
       var $document = $.load(body)
 
-      var $nodes = $document('[data-node="node-stylus"]').remove()
+      var $nodes = $document('[data-node="node-stylus"]')
       var uniqStyles = {}
       var $styles = $nodes.each(function(idx, elm) {
         var css = $(elm).text()
