@@ -9,11 +9,11 @@ var codeStr = fs.readFileSync(path.join(__dirname, 'code.local.js'), {
   })
 
 module.exports = function (stylusCode) {
-  this.cacheable()
+  this.cacheable && this.cacheable()
 
   var callback = this.async()
 
-  var hash = md5(stylusCode)
+  var hash = md5(this.resourcePath)
 
   stylus.render(stylusCode, function (err, css) {
     if (err) { callback(err) }

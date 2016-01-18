@@ -7,7 +7,7 @@ var path = require('path')
 var md5 = require('md5')
 
 var compress = require('./compress.js')
-var styleInterceptor = require('./interceptor');
+var styleInterceptor = require('./interceptor')
 
 var codeStr = fs.readFileSync(path.join(__dirname, 'code.local.js'), {
     encoding: 'utf8'
@@ -21,7 +21,7 @@ function register(options) {
       encoding: 'utf8'
     })
 
-    var hash = md5(src)
+    var hash = md5(path.resolve(filename))
 
     stylus.render(src, {filename: filename}, function (err, css) {
       if (err) { throw err }

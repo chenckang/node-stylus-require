@@ -5,6 +5,10 @@ var styleInterceptor = interceptor(function(req, res){
   return {
     // Only HTML responses will be intercepted
     isInterceptable: function(){
+      if (!/2\d\d/.test(res.statusCode)) {
+        return false
+      }
+
       return /text\/html/.test(res.get('Content-Type'))
     },
     // Appends a paragraph at the end of the response body
