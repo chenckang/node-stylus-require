@@ -23860,7 +23860,7 @@
 /* 202 */
 /***/ function(module, exports) {
 
-	module.exports=function(){function e(){var e=document.getElementById(d+"-style");if(e)return e.removeAttribute("data-reactid"),void(e.parentNode!==document.head&&document.head.appendChild(e));var n=document.getElementById(d),o=document.createElement("style");o.id=d+"-style",o.setAttribute("data-node","node-style"),n?o.innerHTML=n.innerHTML:o.innerHTML=t,document.head.appendChild(o)}var t="#list{background:#fff;color:#ff0}#list li{border:5px solid #fff}",d="02d3187c6d5351b423f83e41a4e6a201";return"object"==typeof document&&("complete"===document.readyState&&e(),document.addEventListener("DOMContentLoaded",function(){e()})),{id:d,css:t}};
+	module.exports=function(){var f="#list{background:#fff;color:#ff0}#list li{border:5px solid #fff}",o="02d3187c6d5351b423f83e41a4e6a201";return{id:o,css:f}};
 
 /***/ },
 /* 203 */
@@ -23869,15 +23869,47 @@
 	var React = __webpack_require__(204);
 
 	var Style = React.createClass({
-	  displayName: "Style",
+	  displayName: 'Style',
+
+	  getInitialState: function () {
+	    return this.props.style();
+	  },
+
+	  appendStyle: function () {
+	    var style = document.getElementById(this.state.id + '-style');
+
+	    if (style) {
+	      style.removeAttribute('data-reactid');
+	      if (style.parentNode !== document.head) {
+	        document.head.appendChild(style);
+	      }
+	      return;
+	    }
+
+	    debugger;
+	    var styleDOM = document.createElement("style");
+	    styleDOM.id = this.state.id + '-style';
+	    styleDOM.setAttribute('data-node', 'node-style');
+
+	    styleDOM.innerHTML = this.state.css;
+
+	    document.head.appendChild(styleDOM);
+	  },
+
+	  componentDidMount: function () {
+	    debugger;
+	    if (typeof document === 'object') {
+	      this.appendStyle();
+	    }
+	  },
 
 	  render: function () {
-	    var style = this.props.style();
-
 	    // 如果是后端渲染，则返回占位标签
 	    // 1. 交由express的拦截器处理
 	    // 2. 浏览器端也处理
-	    return React.createElement("noscript", { id: style.id, "data-node": "node-stylus", dangerouslySetInnerHTML: { __html: style.css } });
+	    return React.createElement('noscript', { id: this.state.id, 'data-node': 'node-stylus',
+	      dangerouslySetInnerHTML: { __html: this.state.css }
+	    });
 	  }
 	});
 
@@ -44222,7 +44254,7 @@
 /* 360 */
 /***/ function(module, exports) {
 
-	module.exports=function(){function e(){var e=document.getElementById(n+"-style");if(e)return e.removeAttribute("data-reactid"),void(e.parentNode!==document.head&&document.head.appendChild(e));var d=document.getElementById(n),o=document.createElement("style");o.id=n+"-style",o.setAttribute("data-node","node-style"),d?o.innerHTML=d.innerHTML:o.innerHTML=t,document.head.appendChild(o)}var t="#detail{font-size:3em}",n="92d0c4b558a89920b40c0b8c2e156e8b";return"object"==typeof document&&("complete"===document.readyState&&e(),document.addEventListener("DOMContentLoaded",function(){e()})),{id:n,css:t}};
+	module.exports=function(){var e="#detail{font-size:3em}",c="92d0c4b558a89920b40c0b8c2e156e8b";return{id:c,css:e}};
 
 /***/ },
 /* 361 */
