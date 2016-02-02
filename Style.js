@@ -4,7 +4,7 @@ var Style = React.createClass({
   displayName: 'Style',
 
   getInitialState: function () {
-    return this.props.style();
+    return this.props.style;
   },
 
   appendStyle: function () {

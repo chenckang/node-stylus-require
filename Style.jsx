@@ -3,7 +3,7 @@ var React = require('react')
 var Style = React.createClass({
 
   getInitialState: function () {
-    return this.props.style();
+    return this.props.style;
   },
 
   appendStyle: function () {

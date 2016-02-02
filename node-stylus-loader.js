@@ -4,10 +4,6 @@ var stylus = require('stylus')
 var path = require('path')
 var fs = require('fs')
 
-var codeStr = fs.readFileSync(path.join(__dirname, 'code.local.js'), {
-    encoding: 'utf8'
-  })
-
 module.exports = function (stylusCode) {
   this.cacheable && this.cacheable()
 
@@ -18,6 +14,8 @@ module.exports = function (stylusCode) {
   stylus.render(stylusCode, function (err, css) {
     if (err) { callback(err) }
 
-    callback(null, compress(css, codeStr, hash))
+    var com = compress(css, hash)
+
+    callback(null, "module.exports=" + JSON.stringify(com))
   })
 }

@@ -1,0 +1,34 @@
+{
+  "name": "test-for-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- node/node.js --timeout 5000 && istanbul cover _mocha -- react/react.test.js && istanbul cover _mocha -- webpack/webpack.test.js",
+    "react-build": "babel react/react.jsx --out-file react/react.test.js --presets react",
+    "webpack-build": "webpack webpack/webpack.js webpack/webpack.test.js --target node",
+    "build": "npm run react-build && npm run webpack-build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "~0.19.0",
+    "express": "~4.13.4",
+    "history": "~1.17.0",
+    "jsdom": "~8.0.2",
+    "node-fetch": "~1.3.3",
+    "react": "~0.14.7",
+    "react-addons-test-utils": "~0.14.7",
+    "react-dom": "~0.14.7",
+    "react-engine": "~3.1.0",
+    "react-router": "~1.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "~6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-register": "~6.4.3",
+    "istanbul": "~0.4.2",
+    "webpack": "~1.12.12"
+  }
+}
