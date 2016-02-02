@@ -1,8 +1,5 @@
 language: node_js
 node_js:
   - "4.1"
-  - "iojs"
-before_install:
-  - "cd test && npm install"
 script:
-  - "cd test && npm test"
+  - "npm test"

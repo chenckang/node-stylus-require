@@ -2,7 +2,7 @@ var React = require('react');
 var SampleCSS = require('./Sample.styl');
 var SecondCSS = require('./Second.styl');
 var Child = require('./child/Child.jsx');
-var Style = require('node-stylus-require/Style.js');
+var Style = require('../../../Style.js');
 
 var Sample = React.createClass({
   render: function() {
