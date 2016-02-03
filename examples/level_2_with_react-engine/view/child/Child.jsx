@@ -2,7 +2,7 @@ import React from 'react'
 import SecondCSS from '../Second.styl' // Load stylus files repeatedly is okay
 var ChildCSS = require('./Child.styl') // Use `require` other than `import`
 
-import Style from 'node-stylus-require/Style.js'
+import Style from /*node-stylus-require/Style.js*/'../../../../Style.js'
 
 class Child extends React.Component {
 

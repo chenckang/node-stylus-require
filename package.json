@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "cd test && npm test",
-    "build": "npm install && babel Style.jsx --out-file Style.js --presets react"
+    "build": "npm install && babel Style.jsx --out-file Style.js --presets react",
+    "level1": "cd examples/level_1_simple-example && node simple.js",
+    "level3": "cd examples/level_3_pure-webpack-SPA && webpack-dev-server --devtool source-map --progress --inline --colors --port 8888"
   },
   "keywords": [
     "react-engine",
@@ -26,6 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-cli": "~6.3.17",
+    "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "~6.3.13",
     "cheerio": "^0.19.0",
     "clean-css": "~3.4.8",

@@ -14,7 +14,6 @@
 \*-------------------------------------------------------------------------------------------------------------------*/
 
 'use strict';
-var webpack = require('webpack');
 
 module.exports = {
 
@@ -30,7 +29,10 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel?presets[]=react'
+        loader: 'babel-loader',
+        query: {
+          presets: ['react', 'es2015']
+        }
       },
       {
         test: /\.json$/,
@@ -41,9 +43,6 @@ module.exports = {
       }
     ]
   },
-
-  plugins: [
-  ],
 
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']

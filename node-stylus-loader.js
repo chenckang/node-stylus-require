@@ -8,8 +8,9 @@ module.exports = function (stylusCode) {
   this.cacheable && this.cacheable()
 
   var callback = this.async()
+  var filePath = this.resourcePath
 
-  var hash = md5(this.resourcePath)
+  var hash = md5(filePath.toLowerCase())
 
   stylus.render(stylusCode, function (err, css) {
     if (err) { callback(err) }

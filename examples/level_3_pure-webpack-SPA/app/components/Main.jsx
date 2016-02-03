@@ -9,7 +9,7 @@ class Main extends React.Component {
             <div id="main">
                 <h1>Example</h1>
                 <Link to="example">Go to example</Link>
-                <RouteHandler></RouteHandler>
+                {this.props.children}
                 <Style style={MainCSS}></Style>
             </div>
         );

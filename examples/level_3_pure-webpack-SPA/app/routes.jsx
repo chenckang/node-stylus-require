@@ -1,13 +1,17 @@
 import React from 'react';
-import {Route} from 'react-router';
+import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+import createHashHistory from 'history/lib/createHashHistory';
 
 import Main from './components/Main.jsx';
 import Example from './components/example/Example.jsx';
 
 const routes = (
-    <Route handler={Main}>
-        <Route name="example" handler={Example}></Route>
-    </Route>
+    <Router history={createHashHistory()}>
+      <Route path="/" component={Main}>
+          <IndexRoute component={Example}/>
+          <Route path="example" component={Example}></Route>
+      </Route>
+    </Router>
 );
 
 export default routes;
