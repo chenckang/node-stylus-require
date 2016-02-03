@@ -69,6 +69,7 @@ describe('express', function () {
 
     app.render('Sample.jsx', function (err, html) {
       var $ = cheerio;
+      console.log(html)
       var $document = $.load(html)
 
       stylusFiles.forEach(function (item) {
