@@ -21,7 +21,8 @@
     "react-addons-test-utils": "~0.14.7",
     "react-dom": "~0.14.7",
     "react-engine": "~3.1.0",
-    "react-router": "~1.0.3"
+    "react-router": "~1.0.3",
+    "should": "^8.2.1"
   },
   "devDependencies": {
     "babel-cli": "~6.4.5",
@@ -29,6 +30,10 @@
     "babel-preset-react": "^6.3.13",
     "babel-register": "~6.4.3",
     "istanbul": "~0.4.2",
-    "webpack": "~1.12.12"
+    "webpack": "~1.12.12",
+    "clean-css": "~3.4.8",
+    "stylus": "^0.53.0",
+    "express-interceptor": "^1.1.1",
+    "md5": "^2.0.0"
   }
 }

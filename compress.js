@@ -1,6 +1,5 @@
 var CleanCSS = require('clean-css')
 var cleanCSS = new CleanCSS()
-var UglifyJS = require('uglify-js')
 
 module.exports = function (css, hash) {
   var code
