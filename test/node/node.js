@@ -71,7 +71,7 @@ describe('express', function () {
     var stylusFiles = [
       '../assets/react/Sample.styl',
       '../assets/react/Second.styl',
-      '../assets/react/Child/Child.styl'
+      '../assets/react/child/Child.styl'
     ];
 
     return expect(app, 'to yield exchange', {
