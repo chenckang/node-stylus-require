@@ -4,7 +4,10 @@
   "description": "",
   "main": "node.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- node/node.js --no-timeouts && istanbul cover _mocha -- react/react.test.js && istanbul cover _mocha -- webpack/webpack.test.js",
+    "test": "npm run test-node && npm run test-react && npm run test-webpack",
+    "test-node": "istanbul cover _mocha -- node/node.js --no-timeouts",
+    "test-react": "istanbul cover _mocha -- react/react.test.js",
+    "test-webpack": "istanbul cover _mocha -- webpack/webpack.test.js",
     "react-build": "babel react/react.jsx --out-file react/react.test.js --presets react",
     "webpack-build": "webpack webpack/webpack.js webpack/webpack.test.js --target node",
     "build": "npm run react-build && npm run webpack-build"

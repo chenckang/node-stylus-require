@@ -4,8 +4,8 @@
   "description": "A stylus requiring tool for isomorphic applications, typically use react-engine&express as the backend and react as the front end.",
   "main": "index.js",
   "scripts": {
-    "test": "npm install && cd test && npm install && npm run build && npm test",
-    "build": "babel Style.jsx --out-file Style.js --presets react"
+    "test": "cd test && npm test",
+    "build": "npm install && babel Style.jsx --out-file Style.js --presets react"
   },
   "keywords": [
     "react-engine",
