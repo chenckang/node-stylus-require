@@ -16,16 +16,13 @@
 'use strict';
 
 var React = require('react');
-var Router = require('react-router');
 var detailCSS = require('./Detail.styl');
 var Style = require('node-stylus-require/Style.js');
 
 module.exports = React.createClass({
 
-  mixins: [Router.State],
-
   render: function render() {
-    var movieId = this.getParams().id;
+    var movieId = this.props.params.id;
     var movie = this.props.movies.filter(function(_movie) {
       return _movie.id === movieId;
     })[0];

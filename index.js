@@ -9,10 +9,6 @@ var md5 = require('md5')
 var compress = require('./compress.js')
 var styleInterceptor = require('./interceptor')
 
-var codeStr = fs.readFileSync(path.join(__dirname, 'code.local.js'), {
-    encoding: 'utf8'
-  })
-
 function register(options) {
   options = options || {}
 
@@ -21,17 +17,28 @@ function register(options) {
       encoding: 'utf8'
     })
 
-    var hash = md5(path.resolve(filename))
+    var filePath = path.resolve(filename)
+
+    var hash = md5(filePath.toLowerCase())
 
     stylus.render(src, {filename: filename}, function (err, css) {
       if (err) { throw err }
 
-      module._compile(compress(css, codeStr, hash))
+      var sty = compress(css, hash)
+
+      module._compile('module.exports=' + JSON.stringify(sty))
     })
   }
 }
 
+function remove(options) {
+  options = options || {}
+  delete require.extensions[options.extensions || '.styl']
+}
+
 module.exports = {
   register: register,
+  install: register,
+  remove: remove,
   styleInterceptor: styleInterceptor
 }

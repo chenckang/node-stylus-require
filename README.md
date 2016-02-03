@@ -1,6 +1,7 @@
 # node-stylus-require
 
 [![npm version](https://badge.fury.io/js/node-stylus-require.svg)](https://badge.fury.io/js/node-stylus-require)
+[![Build Status](https://travis-ci.org/chenckang/node-stylus-require.svg?branch=master)](https://travis-ci.org/chenckang/node-stylus-require)
 
 ## Synopsis
 

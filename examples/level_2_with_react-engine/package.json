@@ -4,17 +4,13 @@
   "description": "",
   "main": "loader.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "cd ../../ && npm link && cd examples/level_2_with_react-engine && npm install && npm link node-stylus-require && node app.js"
   },
   "author": "chenckang@gmail.com",
   "license": "MIT",
-  "devDependencies": {
-    "express": "^4.13.3"
-  },
   "dependencies": {
     "node-require-jsx": "~0.1.1",
-    "node-stylus-require": "^1.0.2-beta",
-    "react-engine": "~2.6.0"
+    "react-engine": "~2.6.0",
+    "express": "^4.13.3"
   }
 }

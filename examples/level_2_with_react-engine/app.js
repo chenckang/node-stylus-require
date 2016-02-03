@@ -1,6 +1,6 @@
 require('node-require-jsx').install()
 
-var nodeStylusRequire = require('node-stylus-require')
+var nodeStylusRequire = require(/*node-require-jsx*/'../../')
 
 nodeStylusRequire.register({})
 
@@ -22,7 +22,7 @@ app.set('view', require('react-engine/lib/expressView'))
 app.use(nodeStylusRequire.styleInterceptor)
 
 app.get('/', function (req, res, next) {
-  res.render('Sample.jsx');
+  res.render('Sample.jsx')
   next();
 })
 

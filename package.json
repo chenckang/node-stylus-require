@@ -1,11 +1,13 @@
 {
   "name": "node-stylus-require",
-  "version": "1.0.8-beta",
+  "version": "1.1.0-beta",
   "description": "A stylus requiring tool for isomorphic applications, typically use react-engine&express as the backend and react as the front end.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel Style.jsx --out-file Style.js --presets react"
+    "test": "cd test && npm test",
+    "build": "npm install && babel Style.jsx --out-file Style.js --presets react",
+    "level1": "cd examples/level_1_simple-example && node simple.js",
+    "level3": "cd examples/level_3_pure-webpack-SPA && webpack-dev-server --devtool source-map --progress --inline --colors --port 8888"
   },
   "keywords": [
     "react-engine",
@@ -26,12 +28,13 @@
   "license": "MIT",
   "dependencies": {
     "babel-cli": "~6.3.17",
+    "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "~6.3.13",
     "cheerio": "^0.19.0",
     "clean-css": "~3.4.8",
     "express-interceptor": "^1.1.1",
-    "react": "^0.13.3",
-    "stylus": "^0.53.0",
-    "uglify-js": "^2.6.1"
+    "md5": "^2.0.0",
+    "react": "^0.14.7",
+    "stylus": "^0.53.0"
   }
 }

@@ -1,10 +1,5 @@
 import React from 'react';
-import Router from 'react-router';
 import routes from './routes.jsx';
+import { render } from 'react-dom'
 
-Router.run(routes, Router.HashLocation, (Root, state) => {
-    React.render(
-        <Root {...state}/>,
-        document.getElementById('content')
-    );
-});
+render(routes, document.getElementById('content'))
