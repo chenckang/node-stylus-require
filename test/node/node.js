@@ -35,11 +35,10 @@ describe('express', function () {
   var express = require('express')
   var inst = require('../../index.js')
   var app = express()
-  var server
   var fs = require('fs')
   var fetch = require('node-fetch')
 
-  before(function (done) {
+  before(function () {
     inst.register()
     app.use(inst.styleInterceptor)
     var reactEngine = require('react-engine')
@@ -55,47 +54,22 @@ describe('express', function () {
 
     app.set('view', require('react-engine/lib/expressView'))
 
-    app.get('/', function (req, res, next) {
-      res.render('Sample.jsx')
-      next()
-    })
-
-    server = app.listen('8888', function () {
-      var host = server.address().address
-      var port = server.address().port
-      console.log("Node server is ready on Http://%s:%s/", host, port)
-      done()
-    })
   })
 
-  after(function (done) {
+  after(function () {
     inst.remove()
-    server && server.close(function () {
-      console.log("Node server is closed!")
-      done()
-    })
-    server || done()
   })
 
-  it('->intercept', function (done) {
-    var p = fetch('http://localhost:8888/')
+  it('->intercept', function () {
     var stylusFiles = [
       '../assets/react/Sample.styl',
       '../assets/react/Second.styl',
       '../assets/react/Child/Child.styl'
     ];
 
-    p.catch(function (e) {
-      e.should.not.be.type('Error')
-      done()
-    })
-
-    p.then(function (res) {
-      return res.text()
-    })
-    .then(function (body) {
+    app.render('Sample.jsx', function (err, html) {
       var $ = cheerio;
-      var $document = $.load(body)
+      var $document = $.load(html)
 
       stylusFiles.forEach(function (item) {
         var itemStyle = require(item)
@@ -103,8 +77,7 @@ describe('express', function () {
         $itemDOM.should.be.instanceOf(Object)
         $itemDOM.html().should.be.eql(itemStyle.css)
       });
-
-      done()
     })
+
   })
 })

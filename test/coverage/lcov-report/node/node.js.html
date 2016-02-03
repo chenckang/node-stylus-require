@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96.83% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>61/63</span>
+        <span class='fraction'>44/44</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/4</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">93.75% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>15/16</span>
+        <span class='fraction'>11/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96.83% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>61/63</span>
+        <span class='fraction'>44/44</span>
       </div>
     </div>
   </div>
@@ -126,34 +126,7 @@
 81
 82
 83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+84</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -192,7 +165,6 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -210,29 +182,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -241,14 +196,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -259,7 +206,6 @@
 <span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -300,11 +246,10 @@ describe('express', function () {
   var express = require('express')
   var inst = require('../../index.js')
   var app = express()
-  var server
   var fs = require('fs')
   var fetch = require('node-fetch')
 &nbsp;
-  before(function (done) {
+  before(function () {
     inst.register()
     app.use(inst.styleInterceptor)
     var reactEngine = require('react-engine')
@@ -320,47 +265,22 @@ describe('express', function () {
 &nbsp;
     app.set('view', require('react-engine/lib/expressView'))
 &nbsp;
-    app.get('/', function (req, res, next) {
-      res.render('Sample.jsx')
-      next()
-    })
-&nbsp;
-    server = app.listen('8888', function () {
-      var host = server.address().address
-      var port = server.address().port
-      console.log("Node server is ready on Http://%s:%s/", host, port)
-      done()
-    })
   })
 &nbsp;
-  after(function (done) {
+  after(function () {
     inst.remove()
-    server &amp;&amp; server.close(function () {
-      console.log("Node server is closed!")
-      done()
-    })
-    server || <span class="branch-1 cbranch-no" title="branch not covered" >done()</span>
   })
 &nbsp;
-  it('-&gt;intercept', function (done) {
-    var p = fetch('http://localhost:8888/')
+  it('-&gt;intercept', function () {
     var stylusFiles = [
       '../assets/react/Sample.styl',
       '../assets/react/Second.styl',
       '../assets/react/Child/Child.styl'
     ];
 &nbsp;
-    p.catch(<span class="fstat-no" title="function not covered" >function (e) {</span>
-<span class="cstat-no" title="statement not covered" >      e.should.not.be.type('Error')</span>
-<span class="cstat-no" title="statement not covered" >      done()</span>
-    })
-&nbsp;
-    p.then(function (res) {
-      return res.text()
-    })
-    .then(function (body) {
+    app.render('Sample.jsx', function (err, html) {
       var $ = cheerio;
-      var $document = $.load(body)
+      var $document = $.load(html)
 &nbsp;
       stylusFiles.forEach(function (item) {
         var itemStyle = require(item)
@@ -368,9 +288,8 @@ describe('express', function () {
         $itemDOM.should.be.instanceOf(Object)
         $itemDOM.html().should.be.eql(itemStyle.css)
       });
-&nbsp;
-      done()
     })
+&nbsp;
   })
 })
 &nbsp;</pre></td></tr>
@@ -379,7 +298,7 @@ describe('express', function () {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 03 2016 11:14:35 GMT+0800 (CST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 03 2016 11:48:46 GMT+0800 (CST)
 </div>
 </div>
 <script src="../prettify.js"></script>
