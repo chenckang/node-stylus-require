@@ -37,6 +37,9 @@ describe('express', function () {
   var app = express()
   var fs = require('fs')
   var fetch = require('node-fetch')
+  var expect = require('unexpected')
+    .clone()
+    .installPlugin(require('unexpected-express'));
 
   before(function () {
     inst.register()
@@ -54,6 +57,10 @@ describe('express', function () {
 
     app.set('view', require('react-engine/lib/expressView'))
 
+    app.get('/', function (req, res) {
+      res.render('Sample.jsx')
+    })
+
   })
 
   after(function () {
@@ -67,10 +74,13 @@ describe('express', function () {
       '../assets/react/Child/Child.styl'
     ];
 
-    app.render('Sample.jsx', function (err, html) {
+    return expect(app, 'to yield exchange', {
+      request: {
+        url: '/'
+      }
+    }).then(function (context) {
       var $ = cheerio;
-      console.log(html)
-      var $document = $.load(html)
+      var $document = $.load(context.httpResponse.body)
 
       stylusFiles.forEach(function (item) {
         var itemStyle = require(item)
