@@ -17,6 +17,10 @@ describe('react', function () {
     simple = require('../assets/simple.styl')
   })
 
+  after(function () {
+    inst.remove()
+  })
+
   it('->Style.js', function () {
     var sty = TestUtils.renderIntoDocument(
       <Style style={simple}/>
