@@ -36,7 +36,6 @@ describe('express', function () {
   var inst = require('../../index.js')
   var app = express()
   var fs = require('fs')
-  var fetch = require('node-fetch')
   var expect = require('unexpected')
     .clone()
     .installPlugin(require('unexpected-express'));
