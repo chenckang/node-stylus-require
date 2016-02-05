@@ -4,17 +4,18 @@
   "description": "",
   "main": "node.js",
   "scripts": {
-    "test": "npm link node-stylus-require && npm run build && npm run test-node && npm run test-react && npm run test-webpack",
-    "test-node": "../node_modules/istanbul/lib/cli.js cover _mocha -- node/node.js --no-timeouts",
-    "test-react": "../node_modules/istanbul/lib/cli.js cover _mocha -- react/react.test.js",
-    "test-webpack": "../node_modules/istanbul/lib/cli.js cover _mocha -- webpack/webpack.test.js",
+    "test": "npm link node-stylus-require && npm install && npm run build && npm run test-node && npm run test-react && npm run test-webpack",
+    "test-node": "istanbul cover _mocha -- node/node.js --no-timeouts",
+    "test-react": "istanbul cover _mocha -- react/react.test.js",
+    "test-webpack": "istanbul cover _mocha -- webpack/webpack.test.js",
     "react-build": "babel react/react.jsx --out-file react/react.test.js --presets react",
     "webpack-build": "webpack webpack/webpack.js webpack/webpack.test.js --target node",
     "build": "npm run react-build && npm run webpack-build"
   },
   "devDependencies": {
     "babel-cli": "~6.3.17",
-    "istanbul": "~0.4.2"
+    "istanbul": "~0.4.2",
+    "mocha": "^2.4.5"
   },
   "author": "",
   "license": "ISC"
