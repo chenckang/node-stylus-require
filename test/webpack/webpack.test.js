@@ -4105,7 +4105,7 @@
 /* 26 */
 /***/ function(module, exports) {
 
-	module.exports={"id":"4dc4b6270b5ece3eab006d36de505798","css":".simple-demo{font-size:10em;background:red}"}
+	module.exports={"id":"3330ff312c4870dbd3ef8d0fe0c926a9","css":".simple-demo{font-size:10em;background:red}"}
 
 /***/ }
 /******/ ]);

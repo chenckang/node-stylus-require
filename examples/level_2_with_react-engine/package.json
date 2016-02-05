@@ -4,13 +4,9 @@
   "description": "",
   "main": "loader.js",
   "scripts": {
-    "start": "cd ../../ && npm link && cd examples/level_2_with_react-engine && npm install && npm link node-stylus-require && node app.js"
+    "test": "npm link node-stylus-require && istanbul cover _mocha -- test/test.level2.js",
+    "start": "npm link node-stylus-require && node app.js"
   },
   "author": "chenckang@gmail.com",
-  "license": "MIT",
-  "dependencies": {
-    "node-require-jsx": "~0.1.1",
-    "react-engine": "~2.6.0",
-    "express": "^4.13.3"
-  }
+  "license": "MIT"
 }

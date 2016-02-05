@@ -4,8 +4,8 @@
   "description": "",
   "main": "simple.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd ../../ && npm link && cd examples/level_1_simple-example && npm link node-stylus-require && node simple.js"
+    "test": "npm link node-stylus-require && istanbul cover _mocha -- test/test.level1.js",
+    "start": "npm link node-stylus-require && node simple.js"
   },
   "author": "chenckang@gmail.com",
   "license": "MIT"

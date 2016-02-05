@@ -4,10 +4,14 @@
   "description": "A stylus requiring tool for isomorphic applications, typically use react-engine&express as the backend and react as the front end.",
   "main": "index.js",
   "scripts": {
-    "test": "cd test && npm test",
+    "test": "cd test && npm test && cd ../ && npm run examples-test",
+    "link": "npm install && npm link",
     "build": "npm install && babel Style.jsx --out-file Style.js --presets react",
-    "level1": "cd examples/level_1_simple-example && node simple.js",
-    "level3": "cd examples/level_3_pure-webpack-SPA && webpack-dev-server --devtool source-map --progress --inline --colors --port 8888"
+    "examples-test": "npm run level1-test && npm run level2-test && npm run level3-test && npm run level4-test",
+    "level1-test": "cd examples/level_1_simple-example && npm test && cd ../../",
+    "level2-test": "cd examples/level_2_with_react-engine && npm test && cd ../../",
+    "level3-test": "cd examples/level_3_pure-webpack-SPA && npm test && cd ../../",
+    "level4-test": "cd examples/level_4_isomorphic-app && npm test && cd ../../"
   },
   "keywords": [
     "react-engine",
@@ -36,5 +40,38 @@
     "md5": "^2.0.0",
     "react": "^0.14.7",
     "stylus": "^0.53.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "express": "^4.13.3",
+    "history": "~1.17.0",
+    "html-webpack-plugin": "^1.6.2",
+    "istanbul": "~0.4.2",
+    "jsdom": "~8.0.2",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-cli": "~0.1.1",
+    "karma-mocha": "^0.2.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "magicpen-media": "~1.5.1",
+    "messy": "~6.7.1",
+    "mocha": "~2.4.5",
+    "node-require-jsx": "~0.1.1",
+    "react-addons-test-utils": "~0.14.7",
+    "react-dom": "~0.14.7",
+    "react-engine": "~2.6.0",
+    "react-router": "~1.0.3",
+    "serve-favicon": "^2.3.0",
+    "should": "^8.2.1",
+    "unexpected": "^10.8.1",
+    "unexpected-express": "~8.1.0",
+    "unexpected-messy": "~5.1.1",
+    "user-home": "~2.0.0",
+    "webpack": "^1.12.2"
   }
 }

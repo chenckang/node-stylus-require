@@ -8,7 +8,7 @@ class Main extends React.Component {
         return (
             <div id="main">
                 <h1>Example</h1>
-                <Link to="example">Go to example</Link>
+                <Link ref="exampleBtn" id="exampleBtn" to="example">Go to example</Link>
                 {this.props.children}
                 <Style style={MainCSS}></Style>
             </div>

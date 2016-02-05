@@ -1,6 +1,6 @@
 require('node-require-jsx').install()
 
-var nodeStylusRequire = require(/*node-require-jsx*/'../../')
+var nodeStylusRequire = require('node-stylus-require')
 
 nodeStylusRequire.register({})
 

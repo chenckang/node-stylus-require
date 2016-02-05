@@ -34,7 +34,7 @@ This is a simple usage, with this you can require stylus file directly into your
     // simple.styl is the stylus file under the same folder
     var simpleCSS = require('./simple.styl')
 
-    console.log('This output css is %s !', JSON.stringify(simpleCSS()));
+    console.log('This output css is %s !', JSON.stringify(simpleCSS));
 
 The `{extensions: '.styl'}` is optional, and the `.styl` is the default value. The return format is `{id: {MD5}, css: {CSS String}}`.
 

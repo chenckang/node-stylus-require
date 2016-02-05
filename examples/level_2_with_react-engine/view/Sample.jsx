@@ -2,7 +2,7 @@ import React from 'react'
 import SampleCSS from './Sample.styl'
 import SecondCSS from './Second.styl'
 import Child from './child/Child.jsx'
-import Style from /*node-stylus-require/Style.js*/'../../../Style.js'
+import Style from 'node-stylus-require/Style.js'
 
 class Sample extends React.Component {
   render() {

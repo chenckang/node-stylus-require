@@ -4,12 +4,13 @@ import actions from '../actions/DummyActions';
 
 @createStore(flux)
 class DummyStore {
-    name = "awesome";
 
     @bind(actions.updateName)
     updateName(name) {
         this.name = name;
     }
+
+    name = "awesome";
 }
 
 export default DummyStore;
