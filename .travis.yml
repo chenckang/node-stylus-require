@@ -7,8 +7,5 @@ node_js:
   - "0.10"
 script:
   - "npm run build"
-  - "cd test"
-  - "npm install"
-  - "npm run test-node"
-  - "npm run test-react"
-  - "npm run test-webpack"
+  - "npm run link"
+  - "npm test"

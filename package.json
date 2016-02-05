@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cd test && npm test && cd ../ && npm run examples-test",
-    "link": "npm install && npm link",
+    "link": "npm link",
     "build": "npm install && babel Style.jsx --out-file Style.js --presets react",
     "examples-test": "npm run level1-test && npm run level2-test && npm run level3-test && npm run level4-test",
     "level1-test": "cd examples/level_1_simple-example && npm test && cd ../../",
