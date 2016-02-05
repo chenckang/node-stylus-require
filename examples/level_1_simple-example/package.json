@@ -4,7 +4,7 @@
   "description": "",
   "main": "simple.js",
   "scripts": {
-    "test": "npm link node-stylus-require && istanbul cover _mocha -- test/test.level1.js",
+    "test": "npm link node-stylus-require && ../../node_modules/istanbul/lib/cli.js cover _mocha -- test/test.level1.js",
     "start": "npm link node-stylus-require && node simple.js"
   },
   "author": "chenckang@gmail.com",

@@ -4,7 +4,7 @@
   "description": "",
   "main": "loader.js",
   "scripts": {
-    "test": "npm link node-stylus-require && istanbul cover _mocha -- test/test.level2.js",
+    "test": "npm link node-stylus-require && ../../node_modules/istanbul/lib/cli.js cover _mocha -- test/test.level2.js",
     "start": "npm link node-stylus-require && node app.js"
   },
   "author": "chenckang@gmail.com",
