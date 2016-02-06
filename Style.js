@@ -9,6 +9,7 @@ var Style = React.createClass({
 
   appendStyle: function () {
     var style = document.getElementById(this.state.id + '-style');
+
     if (style) {
       style.removeAttribute('data-reactid');
       style.innerHTML = this.state.css;
