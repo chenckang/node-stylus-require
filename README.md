@@ -15,15 +15,17 @@ The installation is pretty simple. Use `npm install` node-stylus-require to your
 
 ## What is isomorphic and why
 
-Isomorphic applications are the awesome ones that the backend and the frontend use the same code, which is usually JavaScript. And it is pretty fast with better user experience.
+Isomorphic applications are the awesome ones that the backend and the frontend use mostly the same code, which is usually JavaScript. And the frontend part usually is based on Single Page Architect. Isomorphic applications are fast and get a better user experience.
 
-The reasons why they are fast are that they use backend rendering all the page with JavaScript executed so that the first screen is pretty fast, and the SPA on the frontend need no loading of addtional resources. Now with the help of NodeJS this is really possible that both the frontend and the backend use the same code. This is really cool and is the future of JavaScript!
+The reasons why they are fast are that they use backend rendering with NodeJS and service data so that the first screen is fast enough. After the browser has got the first page, SPA on the frontend just load the basic resource and data to show other things such as new components or just another new page, the result is that user's actions will respond as fast as possible. This may be the future of JavaScript, providing us a way to build faster and better user experience net applications!
 
-The result is people like your awesome application. Here let's get start to learn how to use node-stylus-require to help your application's style management.
+The result is people like your awesome application. Here, node-stylus-require is a tool for you to manager styles files of an typical isomorphic applications but not limited to it. Let's get start to learn how to use it to help.
 
 ## Usage
 
 The node-stylus-require provides 4 levels of usage to require stylus file into your applications. You may not limited to these levels, for it provides flexibility to support usage under other situations.
+
+***Attension: You need to run `npm install` under the root of node-stylus-require so that all the examples can be runned and tested.***
 
 ### Level 1 NodeJS
 
@@ -70,6 +72,7 @@ Finally, add them to your page use React `render` function.
             </head>
             <body>
               <Style style={SampleCSS}></Style>
+              {/*Repeated resources will be handled*/}
               <Style style={SampleCSS}></Style>
               <div>
                 <div className="Sample">
