@@ -15,8 +15,6 @@
 
 'use strict';
 
-const PORT = 8888;
-
 import {join} from 'path';
 import express from 'express';
 import favicon from 'serve-favicon';
@@ -84,6 +82,4 @@ app.use(function(err, req, res, next) {
   }
 });
 
-const server = app.listen(PORT, function() {
-  console.log('Example app listening at http://localhost:%s', PORT);
-});
+module.exports = app;

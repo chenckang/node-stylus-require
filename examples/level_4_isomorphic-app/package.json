@@ -3,8 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cd .",
-    "start": "cd ../.. && npm link && cd examples/level_4_isomorphic-app && npm install && npm link node-stylus-require && webpack && node index.js"
+    "test": "npm install && npm link node-stylus-require && webpack && npm run test-node && npm run test-brow",
+    "test-brow": "karma start",
+    "test-node": "../../node_modules/istanbul/lib/cli.js cover _mocha -- test/test.js --no-timeouts",
+    "start": "cd ../.. && npm link && cd examples/level_4_isomorphic-app && npm install && npm link node-stylus-require && webpack && node start.js"
   },
-  "author": "Sam Selvanathan (sjasel@gmail.com)"
+  "author": "Sam Selvanathan (sjasel@gmail.com)",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "react": "^0.14.7",
+    "react-engine": "^3.1.0",
+    "react-router": "^2.0.0"
+  },
+  "devDependencies": {
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-mocha": "^0.2.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0"
+  }
 }

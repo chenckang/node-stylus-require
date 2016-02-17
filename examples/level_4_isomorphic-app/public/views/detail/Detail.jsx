@@ -18,12 +18,14 @@
 var React = require('react');
 var detailCSS = require('./Detail.styl');
 var Style = require('node-stylus-require/Style.js');
+var mvJSON = require('../../../movies.json');
 
 module.exports = React.createClass({
 
-  render: function render() {
+  render: function () {
+    var movies = this.props.movies || mvJSON;
     var movieId = this.props.params.id;
-    var movie = this.props.movies.filter(function(_movie) {
+    var movie = movies.filter(function(_movie) {
       return _movie.id === movieId;
     })[0];
 

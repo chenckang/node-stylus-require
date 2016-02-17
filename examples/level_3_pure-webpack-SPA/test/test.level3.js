@@ -28,7 +28,6 @@ describe('Level 3 application:', function () {
     main = ReactDOM.render(Routes, document.getElementById('container'));
     mainDOM = ReactDOM.findDOMNode(main);
     mainStyle = getComputedStyle(mainDOM);
-
   });
 
   it('All elements style should be okay:', function () {

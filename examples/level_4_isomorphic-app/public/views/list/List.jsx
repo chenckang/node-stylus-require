@@ -19,10 +19,12 @@ var React = require('react');
 var Router = require('react-router');
 var listCSS = require('./List.styl');
 var Style = require('node-stylus-require/Style.js');
+var mvJSON = require('../../../movies.json');
 
 module.exports = React.createClass({
 
   render: function render() {
+    var movies = this.props.movies || mvJSON;
 
     return (
       <div id='list'>
@@ -30,7 +32,7 @@ module.exports = React.createClass({
         <h1>Movies</h1>
         <h6>Click on a movie to see the details</h6>
         <ul>
-          {this.props.movies.map(function(movie) {
+          {movies.map(function(movie) {
             return (
               <li key={movie.id}>
                 <Router.Link to={'/movie/' + movie.id}>

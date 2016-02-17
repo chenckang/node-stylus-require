@@ -20,5 +20,3 @@ require('babel-register')({
 });
 
 require('node-stylus-require').register();
-
-require('./server');

@@ -26,8 +26,6 @@ module.exports = {
         alert("keyCode mismatch " + oEvent.keyCode + "(" + oEvent.which + ")");
     }
 
-    console.log(oEvent)
-
     var target = elm || document;
 
     target.dispatchEvent(oEvent);

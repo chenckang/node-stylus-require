@@ -21,9 +21,10 @@ import { Router, Route, IndexRoute, Redirect } from 'react-router';
 import Layout from './views/layout.jsx';
 import ListPage from './views/list/List.jsx';
 import DetailPage from './views/detail/Detail.jsx';
+import { hashHistory } from 'react-router';
 
 var routes = module.exports = (
-  <Router>
+  <Router history={hashHistory}>
     <Route path='/' component={Layout}>
       <IndexRoute component={ListPage} />
       <Route path='/movie/:id' component={DetailPage} />
